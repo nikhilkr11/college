@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Sign-up Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .form-wrapper {
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            background-color: #ffffff;
+            padding: 25px 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+
+        .options-group {
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            padding: 10px 10px 5px 10px;
+        }
+
+        .options-group label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn-submit {
+            margin-top: 5px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #2d89ef;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Sign-up Form</h1>
+
+    <div class="form-wrapper">
+        <form>
+            <!-- Full name -->
+            <div class="form-group">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g. Priya Sharma" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Your age" min="1" max="100">
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Create password</label>
+                <input type="password" id="password" name="password" placeholder="At least 6 characters" minlength="6">
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="options-group">
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+            </div>
+
+            <!-- Interests -->
+            <div class="form-group">
+                <label>Interests (choose all that apply)</label>
+                <div class="options-group">
+                    <label><input type="checkbox" name="interests" value="coding"> Coding</label>
+                    <label><input type="checkbox" name="interests" value="drawing"> Drawing</label>
+                    <label><input type="checkbox" name="interests" value="sports"> Sports</label>
+                </div>
+            </div>
+
+            <!-- Class / Grade -->
+            <div class="form-group">
+                <label for="grade">Class / Grade</label>
+                <select id="grade" name="grade">
+                    <option value="" selected>Select grade</option>
+                    <option value="6">Class 6</option>
+                    <option value="7">Class 7</option>
+                    <option value="8">Class 8</option>
+                    <option value="9">Class 9</option>
+                    <option value="10">Class 10</option>
+                    <option value="11">Class 11</option>
+                    <option value="12">Class 12</option>
+                </select>
+            </div>
+
+            <!-- About -->
+            <div class="form-group">
+                <label for="about">Tell us (one line) about yourself</label>
+                <textarea id="about" name="about" placeholder="I love science..."></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-submit">Sign up</button>
+        </form>
+    </div>
+
+</body>
+</html>
